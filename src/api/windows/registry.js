@@ -62,14 +62,17 @@ module.exports = (namePackage, version) => {
     }
   }
 
-  function getUUIDProgram() {
+  function getDataProgram() {
     const key = getKeyORCreate(
       windef.HKEY.HKEY_LOCAL_MACHINE,
       'SOFTWARE\\NSS\\'.concat(namePackage),
       windef.KEY_ACCESS.KEY_ALL_ACCESS
     );
     try {
-      return key.getValue('UUID');
+      return {
+        UUID: key.getValue('UUID'),
+        Version: key.getValue('Version'),
+      };
     } catch (e) {
       return null;
     } finally {
@@ -121,11 +124,17 @@ module.exports = (namePackage, version) => {
       return false;
     }
   }
+  const getUUIDProgram = () => (getDataProgram() || { UUID: null }).UUID;
+
+  const getVersionProgram = () => (getDataProgram() || { UUID: null }).UUID;
+
   return {
     isProgramPreviouslyInstalled,
     thereIsAnotherVersionInstalled,
     registerProgram,
+    getDataProgram,
     getUUIDProgram,
+    getVersionProgram,
     deleteInstallation,
   };
 };
