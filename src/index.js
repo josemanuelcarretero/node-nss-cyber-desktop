@@ -1,7 +1,5 @@
-function helloworld() {
-  console.log('hello world');
-}
+const App = require('./api/app/app');
 
-module.exports = {
-  helloworld: helloworld,
-};
+const app = new App();
+
+app.start();

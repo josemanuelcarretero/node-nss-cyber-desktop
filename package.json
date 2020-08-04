@@ -32,6 +32,9 @@
     "prettier": "^2.0.5"
   },
   "dependencies": {
+    "extends-classes": "^1.0.5",
+    "foreground-process": "https://github.com/josemanuelcarretero/node-foreground-process.git",
+    "uuid": "^8.3.0",
     "windows-registry-napi": "^0.1.6"
   }
 }
