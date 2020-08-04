@@ -16,6 +16,7 @@
     ],
     "rules": {
       "no-console": 1,
-      "prettier/prettier": 2
+      "prettier/prettier": 2,
+      "comma-dangle": [2, "only-multiline"]
     }
 }
