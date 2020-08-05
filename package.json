@@ -1,7 +1,7 @@
 {
   "name": "node-nss-cyber-desktop",
   "description": "non-GUI desktop application for monitoring the Internet cafe computer for the technical test of NSS",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "main": "index.js",
   "license": "CC-BY-NC-4.0",
   "scripts": {

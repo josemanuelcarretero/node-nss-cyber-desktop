@@ -753,9 +753,9 @@ flatted@^2.0.0:
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-2.0.2.tgz#4575b21e2bcee7434aa9be662f4b7b5f9c2b5138"
   integrity sha512-r5wGx7YeOwNWNlCA0wQ86zKyDLMQr+/RB8xy74M4hTphfmjlijTSSXGuH8rnvKZnfT9i+75zmd8jcKdMR4O6jA==
 
-"foreground-process@https://jcarreterocuenca@bitbucket.org/jcarreterocuenca/node-focused-process.git":
+"foreground-process@https://github.com/josemanuelcarretero/node-foreground-process.git":
   version "1.0.3"
-  resolved "https://jcarreterocuenca@bitbucket.org/jcarreterocuenca/node-focused-process.git#41af2f46a6652b534492b207e4e32f17043d5c11"
+  resolved "https://github.com/josemanuelcarretero/node-foreground-process.git#41af2f46a6652b534492b207e4e32f17043d5c11"
   dependencies:
     bindings "^1.2.1"
     chai "^4.2.0"
