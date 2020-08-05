@@ -1,0 +1,40 @@
+{
+  "name": "node-nss-cyber-desktop",
+  "description": "non-GUI desktop application for monitoring the Internet cafe computer for the technical test of NSS",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "CC-BY-NC-4.0",
+  "scripts": {
+    "start": "node src/index.js",
+    "lint": "eslint .",
+    "prettier-format": "prettier --config .prettierrc src --write",
+    "prettier-watch": "onchange 'src/**/*.js' -- prettier --write {{changed}}",
+    "test": "mocha lib/**/**.spec.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn run prettier-format && yarn run lint"
+    }
+  },
+  "engines": {
+    "node": ">= 10.6.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.2.5",
+    "mocha": "^8.1.0",
+    "onchange": "^7.0.2",
+    "prettier": "^2.0.5"
+  },
+  "dependencies": {
+    "extends-classes": "^1.0.5",
+    "foreground-process": "https://github.com/josemanuelcarretero/node-foreground-process.git",
+    "uuid": "^8.3.0",
+    "windows-registry-napi": "^0.1.6"
+  }
+}
